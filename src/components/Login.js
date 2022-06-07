@@ -18,7 +18,6 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault()
     axios.post('/auth/login', state).then((response) => {
-      console.log(response)
       setUser(response.data)
       setAuth(true)
       alert('User is logged')

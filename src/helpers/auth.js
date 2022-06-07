@@ -1,2 +1,9 @@
 import Cookies from 'js-cookie';
-/* Falta criar coisas */
+
+const jwtToken = Cookies.get('user_token')
+
+export const config = {
+    headers: {
+        Authorization: 'Bearer '+ jwtToken
+    },
+}
